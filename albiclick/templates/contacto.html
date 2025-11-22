@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container my-5">
+    <h1 class="hero-title text-center">Decisões mais inteligentes. Operações mais eficientes.</h1>
+    <hr class="mb-5">
+
+    <!--Linha centralizada-->
+    <div class="row justify-content-center">
+         <!--Coluna de largura controlada-->
+        <div class="col-md-6 col-lg-5 bg-white p-5 rounded shadow-lg">
+            <form method="post" action=""> <!--class="border p-5 col-md-6 bg-white p-4 rounded shadow-lg"-->
+                {{form_contacto.csrf_token}}
+                 <Legend class="text-center mb-4">Solicitar Contacto</Legend>
+                <p class="text-center text-muted" style="font-size: 0.9rem; margin-top: -8px; margin-bottom: 15px;">Escolha o melhor horário e nós tratamos do resto.</p>
+                <fieldset>
+                    <div class="form-group mb-3">
+                        {{form_contacto.username.label (class="form-control-label")}}
+                        {{form_contacto.username (class="form-control")}}
+                    </div>
+                    <div class="form-group mb-3">
+                        {{form_contacto.email.label (class="form-control-label")}}
+
+                        {% if form_contacto.email.errors %}
+                            {{form_contacto.email (class="form-control is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for erro in form_contacto.email.errors %}
+                                {{ erro }}
+                            {% endfor %}
+                        </div>
+                        {% else %}
+                            {{form_contacto.email (class="form-control")}}
+                        {% endif %}
+
+
+
+                    </div>
+                     <div class="form-group mb-3">
+                         {{form_contacto.telefone.label (class="form-control-label")}}
+                         {{form_contacto.telefone (class="form-control")}}
+                    </div>
+                     <div class="form-group mb-3">
+                         {{form_contacto.mensagem.label (class="form-control-label")}}
+                         {{form_contacto.mensagem (class="form-control")}}
+                    </div>
+                </fieldset>
+               <div class="d-grid">
+    {{ form_contacto.botao_submit_contacto(
+        class="btn w-100",
+        style="background-color:#007BFF; color:#fff; font-weight:600; padding:12px 0; border:none; border-radius:6px;"
+    ) }}
+</div>
+
+            </form>
+        </div>
+    </div>
+     <hr class="mb-5">
+</div>
+{% endblock %}

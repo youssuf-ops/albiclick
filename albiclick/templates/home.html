@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- SEÇÃO 1 - HERO / INTRO -->
+<div class="container text-center my-5 hero-section">
+    <h1 class="fw-bold">📊 AlbiClick — Análise de Dados & Business Intelligence</h1>
+    <h4 class="text-muted">Transformando dados brutos em insights poderosos para o seu sucesso</h4>
+    <hr class="w-25 mx-auto my-4" style="border-top: 3px solid #f8c6d0;">
+</div>
+
+<!-- SEÇÃO 2 - SOBRE MIM -->
+<div class="container my-5">
+  <div class="row align-items-center justify-content-center">
+
+    <div class="col-md-5 mb-4 mb-md-0">
+      <img src="{{ url_for('static', filename='img/techClick.png') }}"
+           alt="Youssuf Abdula"
+           class="img-fluid rounded shadow-sm">
+    </div>
+
+    <div class="col-md-6">
+      <h2 onmouseover="this.style.color='brown'"
+          onmouseout="this.style.color='black'">Especialistas em gerar insights valiosos para o seu negócio</h2>
+
+
+<p>
+A <strong>AlbiClick</strong> ajuda empresas a transformar dados em decisões mais inteligentes e estratégicas. Atuamos em <strong>Análise de Dados, Business Intelligence e Estudos de Mercado,</strong> convertendo informação dispersa em insights que apoiam o crescimento, melhoram a performance e revelam novas oportunidades.
+    Com rigor analítico, visão estratégica e foco absoluto na utilidade prática, garantimos entregas claras, objetivas e orientadas ao que realmente importa: resultados.
+</p>
+
+
+
+   <div class="d-flex justify-content-center mt-4">
+    <a href="{{ url_for('contacto') }}"
+       class="btn btn-primary px-4 py-2"
+       style="font-weight:600; border-radius:8px;">
+       Reserve uma Consulta
+    </a>
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+
