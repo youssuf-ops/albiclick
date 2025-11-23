@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- SEÇÃO 1 - HERO / INTRO -->
+<section class="container text-center my-5 hero-section">
+    <h1 class="fw-bold hero-title">
+        📊 AlbiClick — Análise de Dados & Business Intelligence
+    </h1>
+
+    <h4 class="text-muted mt-3">
+        Transformando dados brutos em insights poderosos para o seu sucesso
+    </h4>
+
+    <hr class="w-25 mx-auto my-4" style="border-top: 3px solid #f8c6d0;">
+</section>
+
+<!-- SEÇÃO 2 - SOBRE -->
+<section class="container my-5">
+  <div class="row align-items-center justify-content-center">
+
+    <!-- IMAGEM -->
+    <div class="col-sm-10 col-md-5 mb-4 mb-md-0 text-center">
+      <img src="{{ url_for('static', filename='img/techClick.png') }}"
+           alt="Dashboard e Análise de Dados"
+           class="img-fluid rounded shadow-sm">
+    </div>
+
+    <!-- TEXTO -->
+    <div class="col-11 col-md-6">
+
+      <h2 class="fw-bold mb-3 text-md-start text-center"
+          onmouseover="this.style.color='brown'"
+          onmouseout="this.style.color='black'">
+          Especialistas em gerar insights valiosos para o seu negócio
+      </h2>
+
+      <p class="text-md-start text-center">
+        A <strong>AlbiClick</strong> ajuda empresas a transformar dados em decisões mais inteligentes e estratégicas.
+        Atuamos em <strong>Análise de Dados, Business Intelligence e Estudos de Mercado</strong>,
+        convertendo informação dispersa em insights que promovem crescimento, melhoram performance e revelam novas oportunidades.
+        Com rigor analítico, visão estratégica e foco absoluto na utilidade prática, entregamos resultados claros,
+        objetivos e orientados ao que realmente importa: resultados.
+      </p>
+
+      <div class="d-flex justify-content-center justify-content-md-start mt-4">
+        <a href="{{ url_for('contacto') }}"
+           class="btn btn-primary px-4 py-2 fw-semibold"
+           style="border-radius:8px;">
+           Reserve uma Consulta
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+

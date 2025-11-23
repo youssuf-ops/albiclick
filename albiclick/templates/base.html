@@ -1,0 +1,72 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- ESSENCIAL PARA RESPONSIVIDADE NO TELEFONE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AlbiClick</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonte assinatura -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .hero-title {
+            font-family: 'Dancing Script', cursive;
+            font-weight: 700;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            letter-spacing: 0.5px;
+            line-height: 1.1;
+        }
+
+        img { max-width: 100%; height: auto; }
+
+        @media (max-width: 768px) {
+            h1, h2, h3, h4, .hero-title {
+                text-align: center;
+            }
+            .container p {
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+
+        /* Ícone do menu mobile (ESSENCIAL) */
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3E%3C/svg%3E");
+        }
+    </style>
+
+    {% block head %}{% endblock %}
+</head>
+
+
+<body style="background-color:#fff8f9 !important;">
+
+    {% include 'navbar.html' %}
+
+    <div class="container">
+        {% with mensagens = get_flashed_messages(with_categories=True) %}
+            {% if mensagens %}
+                {% for categoria, mensagem in mensagens %}
+                <div class="alert alert-{{categoria}} text-center mt-3" role="alert">
+                    {{ mensagem }}
+                </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    {% block body %}{% endblock %}
+
+    {% include 'footer.html' %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+

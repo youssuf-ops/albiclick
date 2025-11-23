@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container text-center my-5">
+    <h1 class="fw-bold">Serviços AlbiClick</h1>
+    <p class="text-muted mb-4">
+        Soluções simples, claras e orientadas por dados — feitas para apoiar o crescimento real do seu negócio.
+    </p>
+    <hr class="w-25 mx-auto" style="border-top: 3px solid #f8c6d0;">
+</div>
+
+<!-- GRID DE SERVIÇOS -->
+<div class="container my-5">
+    <div class="row justify-content-center g-4">
+
+        <!-- SERVIÇO 1 -->
+        <div class="col-md-5 bg-white p-4 rounded shadow-sm">
+            <h4>📊 Análise de Dados & Insights</h4>
+            <p class="text-muted">
+                Transformo dados brutos em informação clara. Limpeza, organização e análise exploratória para
+                identificar padrões e gerar insights acionáveis.
+            </p>
+        </div>
+
+        <!-- SERVIÇO 2 -->
+        <div class="col-md-5 bg-white p-4 rounded shadow-sm">
+            <h4>📈 Dashboards & Visualização (Power BI / Excel)</h4>
+            <p class="text-muted">
+                Desenvolvimento de dashboards profissionais e fáceis de usar, com KPIs essenciais e relatórios dinâmicos para suportar decisões rápidas.
+            </p>
+        </div>
+
+        <!-- SERVIÇO 3 -->
+        <div class="col-md-5 bg-white p-4 rounded shadow-sm">
+            <h4>🗂️ Organização & Estruturação de Dados</h4>
+            <p class="text-muted">
+                Padronização, limpeza e estruturação de dados para melhorar a qualidade da informação e preparar bases para análises futuras.
+            </p>
+        </div>
+
+        <!-- SERVIÇO 4 -->
+        <div class="col-md-5 bg-white p-4 rounded shadow-sm">
+            <h4>🌍 Análise de Mercados & Tendências</h4>
+            <p class="text-muted">
+                Estudos objetivos de mercados, concorrência e tendências de consumo — com foco em Comércio Internacional e oportunidades reais.
+            </p>
+        </div>
+
+        <!-- SERVIÇO 5 -->
+        <div class="col-md-5 bg-white p-4 rounded shadow-sm">
+            <h4>📊 Benchmarking de Produtos & Concorrentes</h4>
+            <p class="text-muted">
+                Comparação estratégica de desempenho, preços e posicionamento, ajudando empresas a entenderem seu cenário competitivo.
+            </p>
+        </div>
+
+        <!-- SERVIÇO 6 -->
+        <div class="col-md-5 bg-white p-4 rounded shadow-sm">
+            <h4>📝 Formulários Inteligentes & Mini-Sistemas</h4>
+            <p class="text-muted">
+                Desenvolvimento de formulários simples, responsivos e organizados para recolha estruturada de dados e pedidos.
+            </p>
+        </div>
+
+        <!-- SERVIÇO 7 -->
+        <div class="col-md-5 bg-white p-4 rounded shadow-sm">
+            <h4>🎯 Consultoria Estratégica Baseada em Dados</h4>
+            <p class="text-muted">
+                Orientação prática para empresas que precisam de clareza na tomada de decisão. Diagnóstico, indicadores e prioridades.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<!-- CALL TO ACTION FINAL -->
+<div class="container text-center my-5">
+    <hr class="w-25 mx-auto mb-4" style="border-top: 3px solid #f8c6d0;">
+    <h3>Pronto para transformar os seus dados em resultados?</h3>
+    <p class="text-muted mb-4">Entre em contacto e marque uma consulta inicial.</p>
+
+   <a href="{{ url_for('contacto') }}"
+   class="btn px-4 py-2"
+   style="background-color:#007BFF; color:#fff; font-weight:600; border-radius:6px;">
+    Falar com a AlbiClick
+</a>
+</div>
+
+
+
+
+{% endblock %}
