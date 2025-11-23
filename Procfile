@@ -1,1 +1,1 @@
-web: gunicorn albiclick.main:app
+web: gunicorn albiclick:app
